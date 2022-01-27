@@ -1,0 +1,12 @@
+LICENSE
+pyproject.toml
+setup.cfg
+setup.py
+src/Kaggle_Goalie_Data_Analytics.egg-info/PKG-INFO
+src/Kaggle_Goalie_Data_Analytics.egg-info/SOURCES.txt
+src/Kaggle_Goalie_Data_Analytics.egg-info/dependency_links.txt
+src/Kaggle_Goalie_Data_Analytics.egg-info/not-zip-safe
+src/Kaggle_Goalie_Data_Analytics.egg-info/requires.txt
+src/Kaggle_Goalie_Data_Analytics.egg-info/top_level.txt
+src/goalie_analytics/__init__.py
+src/goalie_analytics/main.py
