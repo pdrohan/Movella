@@ -4,6 +4,7 @@ import datetime as dt
 import numpy as np
 import webbrowser
 import os 
+import tabulate 
 
 def return_dataframe_(path, show):
     '''1. This function reads a csv from the specified path location and optionally prints the first 5 rows
@@ -209,7 +210,8 @@ def most_efficient(dataframe):
     return the data we want
 '''
 #This reads in the data 
-df = return_dataframe_('Goalies.csv', False)
+path_to_csv = 'Goalies.csv'
+df = return_dataframe_(path_to_csv, False)
 df2 = format_df_columns(df)
 
 print(' ')

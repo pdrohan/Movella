@@ -1,19 +1,25 @@
 from goalie_analytics.main import return_dataframe_, format_df_columns, required_columns,\
      percent_games_won_byplayer, percent_games_won_byTeam, w_numbr, l_number, GP_agg,\
           Mins_over_GA_agg, GA_over_SA_agg, agg_all_data, df2, get_unique_val_in_col,\
-               most_efficient_dict, most_stopped_dict
-
+               most_efficient_dict, most_stopped_dict,path_to_csv
 import pytest
 import pandas as pd
 
+'''Welcome to the test file, I have tests for every function and I even made some fake csvs, to create
+    tests for unique csv files. A few tests will fail, because I purposely imported
+    some csvs designed to fail. If you want it to run, with or without errors, comment in or out 
+    lines 15, 17, 18, 20, 21. Line 22 
+'''
+
 @pytest.mark.parametrize('test_input', [
-    'test_csvs/Goalies empty rows.csv',
-    # this csv will trigger an error in test_df_is_none & test_df_has_columns, because it is empty
+    # 'test_csvs/Goalies empty rows.csv',
+    # # this csv will trigger an error in test_df_is_none & test_df_has_columns, because it is empty
     # 'test_csvs/goalies empty',
-    'test_csvs/Goalies missing columns.csv',
-    #Will throw an assertion error for test_df_has_columns, because the necessary columns were deleted
-    'test_csvs/Goalies missing key columns.csv',
-    'test_csvs/Goalies unit test.csv'
+    # 'test_csvs/Goalies missing columns.csv',
+    # # Will throw an assertion error for test_df_has_columns, because the necessary columns were deleted
+    # 'test_csvs/Goalies missing key columns.csv',
+    # 'test_csvs/Goalies unit test.csv',
+    path_to_csv
 ] )
 
 class TestParametrized:
@@ -115,31 +121,3 @@ def test_output_dataframe(dataframe_in, expected_rows, col):
 #         i think i am on the right track but this nee
 #     '''
 #     assert df2.dtypes[col] is expected
-
-
-
-
-
-
-# def test_empty_slap():
-#     assert format_df_columns is not None
-
-
-# def test_return_df(ds):
-#     assert return_dataframe_ is not None
-#     assert return_dataframe_.columns > 1
-
-
-# def create_fake_df(numRows, numCols):
-#     output = pd.DataFrame(index=range(numRows),columns=range(numCols))
-#     return output
-
-# ttmz = create_fake_df(10, 4)
-# tmzz_shape = ttmz.shape
-
-
-# def test_check_shape(test_input, expected):
-#     '''Ensure the dataframe returned from a function is the appropriate size 
-#     '''
-#     check_this = test_input.shape
-#     assert check_this == expected
