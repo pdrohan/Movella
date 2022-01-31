@@ -21,7 +21,7 @@ pytest
 4. Run the file however you like
 
 ## Output
-There should be a printed output ( shown below) as well as an HTML file opened.
+There should be a printed output (shown below) as well as an HTML file opened.
 
 The Most Goals Stopped by any Goalie:
 -> {'playerID': 'brodema01', 'goals_stopped': 29915.0}
