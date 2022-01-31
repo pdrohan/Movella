@@ -1,9 +1,11 @@
+from ctypes import util
 from goalie_analytics.main import return_dataframe_, format_df_columns, required_columns,\
      percent_games_won_byplayer, percent_games_won_byTeam, w_numbr, l_number, GP_agg,\
           Mins_over_GA_agg, GA_over_SA_agg, agg_all_data, df2, get_unique_val_in_col,\
                most_efficient_dict, most_stopped_dict,path_to_csv
 import pytest
 import pandas as pd
+from pandas.util.testing import assert_frame_equal # <-- for testing dataframes
 
 '''Welcome to the test file, I have tests for every function and I even made some fake csvs, to create
     tests for unique csv files. A few tests will fail, because I purposely imported
